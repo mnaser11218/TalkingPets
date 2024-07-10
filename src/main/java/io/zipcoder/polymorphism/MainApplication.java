@@ -11,13 +11,16 @@ public class MainApplication {
         Scanner scanner = new Scanner(System.in);
 
         while(!endApp){
-            System.out.println("What type of pet do you have: cat, dog or turtle?");
+            System.out.println("How many pets do you have? ");
+            int amountOfPets = scanner.nextInt();
+
+            System.out.println("What type of pet do you have: Cat, Dog or Turtle?");
             String typeOfAnimal = scanner.next();
             System.out.println("What is the name of your " + typeOfAnimal);
             String nameOfAnimal = scanner.next();
         //    System.out.println("You have a : " + typeOfAnimal + " and it's name is: " + nameOfAnimal);
 
-            switch(typeOfAnimal){
+            switch(typeOfAnimal.toLowerCase()){
                 case "dog":
                     System.out.println("you have a dog");
                     Pet dog = new Dog();
